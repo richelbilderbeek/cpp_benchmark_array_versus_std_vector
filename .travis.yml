@@ -16,5 +16,6 @@ install:
 script: 
   - qmake
   - make debug # Error by the original author
-  #- make release
+  - ./cpp_benchmark_array_versus_std_vector
+  - make release
   - ./cpp_benchmark_array_versus_std_vector

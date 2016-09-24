@@ -46,6 +46,18 @@ struct Pixel
     unsigned char r, g, b;
 };
 
+//Added by richelbilderbeek
+void UseVectorCorrectly()
+{
+    TestTimer t("UseVectorCorrectly");
+
+    for(int i = 0; i < 1000; ++i)
+    {
+        int dimension = 999;
+        std::vector<Pixel> pixels(dimension * dimension, Pixel(255, 0, 0));
+    }
+}
+
 void UseVector()
 {
     TestTimer t("UseVector");
@@ -110,6 +122,7 @@ int main()
     UseArray();
     UseVector();
     UseVectorPushBack();
+    UseVectorCorrectly(); //Added by richelbilderbeek
 
     return 0;
 }
