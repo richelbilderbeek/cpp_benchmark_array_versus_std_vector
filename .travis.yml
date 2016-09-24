@@ -1,0 +1,20 @@
+sudo: require
+language: cpp
+compiler: gcc
+
+addons: 
+  apt: 
+    packages: libboost-all-dev
+
+before_install:
+  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+install: 
+  - sudo apt-get install -qq g++-5
+
+script: 
+  - qmake
+  - make debug # Error by the original author
+  #- make release
+  - ./cpp_benchmark_array_versus_std_vector
