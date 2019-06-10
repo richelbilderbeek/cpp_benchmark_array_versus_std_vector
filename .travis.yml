@@ -15,7 +15,7 @@ install:
 
 script: 
   - qmake
-  - make debug # Error by the original author
+  - make --silent debug # Intentional error to show one should profile in release mode
   - ./cpp_benchmark_array_versus_std_vector
-  - make release
+  - make --silent release
   - ./cpp_benchmark_array_versus_std_vector
