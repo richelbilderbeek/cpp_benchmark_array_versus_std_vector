@@ -5,9 +5,9 @@ SOURCES += main.cpp
 # Cannot use -Weffc++ as the original code will not compile then
 QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 
-# C++14
-QMAKE_CXXFLAGS += -std=c++14
-CONFIG += c++14
+# C++17
+CONFIG += c++17
+QMAKE_CXXFLAGS += -std=c++17
 
 # Debug and release mode
 CONFIG += console debug_and_release
